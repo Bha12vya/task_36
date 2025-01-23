@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card Generator</title>
+  <style>
+    #id-card {
+      width: 300px;
+      height: 180px;
+      border: 2px solid #000;
+      border-radius: 8px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+    }
+    .photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #ccc;
+      margin-right: 10px;
+      background-image: ;
+    }
+    .details {
+      font-size: 0.9rem;
+    }
+    .details div {
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+    <h2>Created an id card</h2>
+  <div id="id-card"></div>
+
+  <script>
+    
+    document.addEventListener("DOMContentLoaded", () => {
+    
+      const idCard = document.getElementById("id-card");
+
+
+      const header = document.createElement("div");
+      header.className = "header";
+      header.textContent = "Employee ID Card";
+      idCard.appendChild(header);
+
+      
+      const content = document.createElement("div");
+      content.className = "content";
+
+
+      const photo = document.createElement("div");
+      photo.className = "photo";
+      content.appendChild(photo);
+const details = document.createElement("div");
+      details.className = "details";
+
+      const name = document.createElement("div");
+      name.textContent = "Name: Bhavya";
+      details.appendChild(name);
+
+      const id = document.createElement("div");
+      id.textContent = "ID: 876549230";
+      details.appendChild(id);
+
+      const department = document.createElement("div");
+      department.textContent = "Department: IT";
+      details.appendChild(department);
+
+      content.appendChild(details);
+      idCard.appendChild(content);
+    });
+  </script>
+</body>
+</html>
